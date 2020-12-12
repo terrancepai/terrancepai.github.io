@@ -1,0 +1,21 @@
+body {
+    background-color: bisque;
+}
+table, th, td {
+    border: 1px solid black;
+    margin: 2px;
+}
+#top {
+    
+}
+#table {
+    float: left;
+    padding: 20px;
+}
+#input {
+    width: 15%;
+    padding: 10px;
+}
+#bottom {
+    height: 100px;
+}

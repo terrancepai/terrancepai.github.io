@@ -1,0 +1,70 @@
+<html>
+    <head> 
+    <script type=text/javascript>
+    
+        function calcBMI() {
+            var heightFt = Number(document.getElementById("heightFt").value);
+            var heightIn = Number(document.getElementById("heightIn").value);
+            var height = heightFt * 12 + heightIn;
+            
+            var weight = Number(document.getElementById("weight").value);
+            
+            var bmi = (weight * 703) / (height * height);
+            
+            document.getElementById("bmi").innerText = bmi;
+        }
+        
+        function reset() {
+            document.getElementById("heightFt").value = '';
+            document.getElementById("heightIn").value = '';
+            document.getElementById("weight").value = '';
+            document.getElementById("bmi").innerText = '';
+        }
+        
+    </script>
+        
+    <style>
+    h1  {
+        color:blue;
+        background-color: whitesmoke;
+        }    
+        .heightfeet {
+        color:purple;
+            font-family: sans-serif;
+        }
+        .heightinch {
+            color:mediumpurple;
+            font-family: sans-serif;
+        }
+        .Weight {
+            color: mediumorchid;
+            font-family: sans-serif;
+        }
+        body {
+            background-color:beige;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>BMI Calculator</h1> 
+        <div class="heightfeet">
+            <p>Height(ft) </p> <input type="text" id="heightFt">
+        </div>
+        <div class="heightinch">
+            <p>Height(in) </p> <input type="text" id="heightIn">
+        </div>
+        <div class="Weight">
+            <p>Weight </p> <input type="text" id="weight">
+        </div>
+        
+        <input type="submit" value="Calc BMI" onclick="calcBMI();"> <input type="submit" value="Clear" onclick="reset();">
+        
+        <p>BMI: <span id="bmi"></span></p>
+    </body>
+
+
+
+
+
+
+</html>
